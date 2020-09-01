@@ -1,17 +1,20 @@
 import React from 'react';
-// import Main from './Components/Main'
-import Routes from './Routes'
-import Nav from './Components/Nav'
+import Count from './Components/Count'
+import Test from './Components/Test'
+
+import { Provider } from 'react-redux'
+import store from './store/index'
 
 const App = () => {
+
   return (
-    <div>
-      <Nav />
-      {/* <Main>
-        <Routes />
-      </Main> */}
-      <Routes />
-    </div>
+    <Provider store={store} >
+      <div className="container">
+        <h2 className="mb-5">React Redux Crush Course</h2>
+        <Count />
+        <Test />
+      </div>
+    </Provider>
   );
 };
 
